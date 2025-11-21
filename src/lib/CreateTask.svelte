@@ -3,6 +3,10 @@
   let title = $state("");
 </script>
 
+<!-- 1 розмітка форми
+     2 привязав поле інпута до стейта title
+     3 передав пропси на форму і кнопку 
+      -->
 <form onsubmit={(e) => submit(e, title)}>
   <input 
   type="text" 
@@ -56,4 +60,22 @@
     background-color: #aaa;
     cursor: not-allowed;
   }
+
+  @media (max-width: 480px) {
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    margin-top: 10px;
+    width: 50%;
+    align-self: center;
+  }
+}
+
 </style>

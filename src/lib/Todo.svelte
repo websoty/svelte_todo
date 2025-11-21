@@ -2,11 +2,18 @@
   let { id, title, status, deleteTask } = $props();
 </script>
 
-<div class="todo {status ? 'checked' : ''}">
+<!-- 1 розмітка, 
+     2 передав пропси,
+     3 привязав чекбокс статус до стейта, 
+     4 додав динамічний клас для чекед
+     5 передав функцію пропсом на видалення елемента -->
+<div class="todo {status ? 'checked' : ''}"> 
   <input type="checkbox" bind:checked={status} />
   <h2>{title}</h2>
   <button onclick={() => deleteTask(id)}>delete </button>
 </div>
+
+
 
 <style>
   .todo {
