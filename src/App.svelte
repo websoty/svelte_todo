@@ -24,6 +24,15 @@
       list = [task, ...list]
     }
 
+    const saved = localStorage.getItem("tasks");
+    if (saved) {
+      list = JSON.parse(saved)
+    }
+
+    $effect(() => {
+      localStorage.setItem("tasks", JSON.stringify(list));
+    })
+
 </script>
 
 
