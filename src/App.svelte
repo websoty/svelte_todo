@@ -24,6 +24,7 @@
       list = [task, ...list]
     }
 
+    //5. localstorage
     const saved = localStorage.getItem("tasks");
     if (saved) {
       list = JSON.parse(saved)
